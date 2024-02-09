@@ -13,8 +13,10 @@ import org.openqa.selenium.interactions.Actions;
 public class Serachthepage {
     public static void main(String args[]) throws Exception {
  
+    try {
     	
-    System.setProperty("webdriver.chrome.driver","D://predator//chromedriver-win32//chromedriver.exe");
+    
+     System.setProperty("webdriver.chrome.driver","D://predator//chromedriver-win32//chromedriver.exe");
         
         	
         
@@ -28,27 +30,35 @@ public class Serachthepage {
        act.moveToElement(element).contextClick().build().perform();
         
         Robot r=new Robot();
+        for(int i=0;i<10;i++)
+        {
+        	
+        
         r.keyPress(KeyEvent.VK_DOWN);
         r.keyRelease(KeyEvent.VK_DOWN);
-        r.keyPress(KeyEvent.VK_DOWN);
-        r.keyRelease(KeyEvent.VK_DOWN);
-        r.keyPress(KeyEvent.VK_DOWN);
-        r.keyRelease(KeyEvent.VK_DOWN);
-        r.keyPress(KeyEvent.VK_DOWN);
-        r.keyRelease(KeyEvent.VK_DOWN);
-        r.keyPress(KeyEvent.VK_DOWN);
-        r.keyRelease(KeyEvent.VK_DOWN);
-        r.keyPress(KeyEvent.VK_DOWN);
-        r.keyRelease(KeyEvent.VK_DOWN);
-        r.keyPress(KeyEvent.VK_DOWN);
-        r.keyRelease(KeyEvent.VK_DOWN);
+        }
+        
+       
         r.keyPress(KeyEvent.VK_ENTER);
         r.keyRelease(KeyEvent.VK_ENTER);
         
         
+        
         Thread.sleep(3000);
         driver.close();
+    }
+    
+        catch(Exception e)
+    {
+       System.out.println("catch block");	
+    }
         
+    finally {
+        
+        System.out.println("finally block is executed");
+        
+
+    }
         
         
         
