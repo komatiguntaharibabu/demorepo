@@ -1,5 +1,6 @@
 package shadi.com;
 
+
 import java.awt.Robot;
 import java.awt.event.KeyEvent;
 
@@ -37,7 +38,7 @@ public class Serachthepage {
         r.keyPress(KeyEvent.VK_DOWN);
         r.keyRelease(KeyEvent.VK_DOWN);
         }
-        
+        					
        
         r.keyPress(KeyEvent.VK_ENTER);
         r.keyRelease(KeyEvent.VK_ENTER);
@@ -50,7 +51,7 @@ public class Serachthepage {
     
         catch(Exception e)
     {
-       System.out.println("catch block");	
+      	System.out.println("catch is ");
     }
         
     finally {
